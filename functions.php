@@ -8,6 +8,15 @@ register_sidebar(array(
    'before_title' => '<h4>',
    'after_title' => '</h4>',
 ));
+register_sidebar(array(
+   'name' => __("Footer Area", CURRENT_THEME),
+   'id' => 'footer-sidebar',
+   'description' => __("Footer Area", CURRENT_THEME),
+   'before_widget' => '<div id="%1$s">',
+   'after_widget' => '</div>',
+   'before_title' => '<h4>',
+   'after_title' => '</h4>',
+));
 add_theme_support( 'post-thumbnails' ); // для всех постов
 //Удаляем meta name generator (WP version)
 add_filter('the_generator', '__return_empty_string', 99);
@@ -39,3 +48,6 @@ add_action('admin_init', 'zacompom_imagelink_setup', 10);
 
 
 add_filter('xmlrpc_enabled', '__return_false');//удаляем xmlrpc
+
+add_filter('excerpt_length', 'my_excerpt_length');
+function my_excerpt_length($len) { return 175; } //анонс статьи 175 символов
