@@ -1,6 +1,6 @@
 ﻿ 	<div id="templatemo_footer">
     
-		Copyright © 2017 <a href="#">Your Company Name</a> | 
+		<?php if (!dynamic_sidebar('Footer Area')) :?> <?php endif;?> 
         
         
     </div>
