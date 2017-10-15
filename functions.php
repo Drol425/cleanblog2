@@ -8,4 +8,4 @@ register_sidebar(array(
    'before_title' => '<h4>',
    'after_title' => '</h4>',
 ));
-add_theme_support( 'post-thumbnails' ); // для всех типов постов
+add_theme_support( 'post-thumbnails' ); // для всех постов
