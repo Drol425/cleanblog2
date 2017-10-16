@@ -40,7 +40,7 @@
         <div id="templatemo_header">
         
             <div id="site_title">
-                <h1><a href="http://www.templatemo.com" target="_parent">Clean <strong>Blog</strong><span>Free HTML-CSS Template</span></a></h1>
+                <h1><a href="journey365.ru" target="_parent">Блог <strong>о Туризме</strong><span>Все о путешествиях!</span></a></h1>
             </div><!-- end of site_title -->
             
         </div> 
