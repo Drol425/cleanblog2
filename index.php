@@ -1,15 +1,13 @@
-﻿<?php
+<?
 /*
-
     Template: index
-
 */
 
 ?>
-<?php get_header(); ?>
+<? get_header(); ?>
     <!-- end of header -->
 
-<?php get_sidebar(); ?>
+<? get_sidebar(); ?>
 
     </div> <!-- end of templatemo_left_column -->
 
@@ -40,27 +38,26 @@
         </div>
 
         <div id="templatemo_main">
-            <?php while (have_posts()): the_post(); ?>
+	        <? while ( have_posts() ): the_post(); ?>
 
                 <div class="post_section">
 
-                    <span class="comment"><?php echo get_comments_number(); ?></span>
+                    <span class="comment"><?= get_comments_number(); ?></span>
 
-                    <h2><a href="blog_post.html"><?php the_title() ?></a></h2>
+                    <h2><a href="<?= get_post_permalink(); ?>"><?= the_title() ?></a></h2>
 
-                    <?php echo get_the_date("d F Y года"); ?> | <strong>Автор:</strong> <?php the_author(); ?> |
-                    <strong>Категория: </strong><?php  the_category(', '); ?>
+			        <?= get_the_date( "d F Y года" ); ?> | <strong>Автор:</strong> <?= the_author(); ?> |
+                    <strong>Категория: </strong><? the_category( ', ' ); ?>
 
-                    <p><?php the_content( 'Продолжить чтение...', TRUE ); ?></p>
+                    <p><? the_content( 'Продолжить чтение...', true ); ?></p>
 
                 </div>
 
-            <?php endwhile; ?>
-
+	        <? endwhile; ?>
         </div>
 
         <div class="cleaner"></div>
     </div>
     <!-- end of templatemo_main -->
     <div class="cleaner_h20"></div>
-<?php get_footer(); ?>
+<? get_footer(); ?>
