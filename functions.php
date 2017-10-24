@@ -50,4 +50,6 @@ add_action('admin_init', 'zacompom_imagelink_setup', 10);
 add_filter('xmlrpc_enabled', '__return_false');//удаляем xmlrpc
 
 add_filter('excerpt_length', 'my_excerpt_length');
-function my_excerpt_length($len) { return 175; } //анонс статьи 175 символов
+register_nav_menus( array(
+    'additionalmenu' => __( 'Additional Menu', 'cleanblog' )
+) );
